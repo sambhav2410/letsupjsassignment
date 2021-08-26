@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Confuser</title>
+    <style>
+        *{ 
+            margin: 0; 
+            padding: 0;
+        }
+
+        .container {
+            height: 500px;
+            width: 500px;
+            background-color: #515151;
+        }
+        body{
+            height: 100vh;
+             display:flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 10px;
+        }
+       
+        .pad{
+            padding:30px;
+    
+        }
+        .score{
+            width: 100%;
+            display:flex;
+            justify-content:flex-end;
+            font-size: 50px;
+            padding-bottom: 10px;
+            color: white;
+        }
+
+        .jumble{
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display:flex;
+            justify-content:center;
+            font-size:40px;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 3px;
+            font-family:sans-serif;
+
+        }
+        .user-input{
+            padding-top: 40px;
+            padding-bottom: 20px;
+            display:flex;
+            flex-direction: column;
+        }
+        .inp{
+            height: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            outline: none;
+            border:1px solid #515151;
+            text-indent: 20px;
+        }
+        .btn{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight:600;
+            border:none;
+            cursor:pointer;
+            background-color: #fff;
+        }
+
+
+
+    </style>
+</head>
+<body>
+     <div class="container">
+     <div class="pad">
+       <div class="score">
+        <p id="score">0</p>
+       </div>
+
+       <div class="jumble">
+          <p id="jword"></p> 
+       </div>
+
+       <div class="user-input">
+           <input type="text" class="inp" id="inp" placeholder="correct word"/>
+           <button class="btn" onclick="checkans()">Submit</button>
+       </div>
+        </div>
+      
+     </div>
+
+
+    <script src="jumble.js"></script>
+</body>
+</html>
